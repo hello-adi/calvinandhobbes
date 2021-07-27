@@ -12,14 +12,14 @@ soup = BeautifulSoup(page.content, 'lxml')
 #print(soup.prettify())
 
 #extracting image url class_=img-fluid lazyloaded
-#image-url
-# <a itemprop="image" class="js-item-comic-link item-comic-link-disabled" title="Calvin and Hobbes">
 
-#   <picture class="item-comic-image"></picture>
-# <img class="img-fluid lazyloaded" srcset="https://assets.amuniversal.com/59ee0c705e0a012ee3bf00163e41dd5b 600w" data-srcset="https://assets.amuniversal.com/59ee0c705e0a012ee3bf00163e41dd5b 600w" sizes="
-#                        (min-width: 992px) 600px,
+# <picture class="item-comic-image"><img alt="Calvin and Hobbes Comic Strip for April 09, 2012 " class="lazyload img-fluid" data-srcset="https://assets.amuniversal.com/d5712420c125012fdd6d001dd8b71c47 900w" sizes="
+#                        (min-width: 992px) 900px,
 #                        (min-width: 768px) 600px,
 #                        (min-width: 576px) 300px,
-#                        600px" alt="Calvin and Hobbes Comic Strip for August 06, 2010 " src="https://assets.amuniversal.com/59ee0c705e0a012ee3bf00163e41dd5b" width="100%"></a>
-imgUrl =  soup.find('img', 'img-fluid lazyloaded')
+#                        900px" src="https://assets.amuniversal.com/d5712420c125012fdd6d001dd8b71c47" srcset="https://assets.gocomics.com/assets/transparent-3eb10792d1f0c7e07e7248273540f1952d9a5a2996f4b5df70ab026cd9f05517.png" width="100%"/></picture>
+imgUrl =  soup.find('picture', 'item-comic-image')
 print(imgUrl)
+img = imgUrl.find("img")
+imgThing = img['src']
+print(imgThing)
