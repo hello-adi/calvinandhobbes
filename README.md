@@ -16,10 +16,5 @@ Project uses:
 * BeautifulSoup4 version: 4.8.2
 * Wget version: 3.2
 	
-## Setup
-To run this project, install it locally using npm:
 
-```
-$ cd ../lorem
-$ npm install
-$ npm start
+
