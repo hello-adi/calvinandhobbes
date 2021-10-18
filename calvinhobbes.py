@@ -3,9 +3,11 @@
 #imports
 import requests
 from bs4 import BeautifulSoup
+import wget
 
 page = requests.get('https://www.gocomics.com/random/calvinandhobbes')
-print(page.url)
+#page url
+#print(page.url)
 
 #BeautifulSoup object
 soup = BeautifulSoup(page.content, 'lxml')
@@ -22,4 +24,8 @@ img =  soup.find('picture', 'item-comic-image')
 
 imgSource = img.find("img")
 imgURL = imgSource['src']
-print(imgURL)
+
+#image url
+#print(imgURL)
+
+wget.download(imgURL)
