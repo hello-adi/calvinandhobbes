@@ -25,7 +25,7 @@ pip install wget
 The application does not require any special inputs. Simply running it will download a comic strip into the file directory. 
 
 ## Credits
-The project was partly inspired by myNameArnav's [xkcd downloader](https://github.com/myNameArnav/xkcdDownloader)
+The project was inspired by myNameArnav's [xkcd downloader](https://github.com/myNameArnav/xkcdDownloader)
 
 ## Future scope
 The overall idea is automating running the script everyday so the user has a comic strip waiting for them at a specific time e.g., in the morning. This can be achieved either by simply running the script everyday at a predefined time or utilising a library which sends the downloaded comic strip to the user by e-mail everyday.
