@@ -9,8 +9,9 @@ import wget
 
 page = requests.get('https://www.gocomics.com/random/calvinandhobbes')
 
-# BeautifulSoup object with lxml parser
-soup = BeautifulSoup(page.content, 'lxml')
+# lxml parser does not work therefore html.parser needs to be used
+# with the BeautifulSoup constructor
+soup = BeautifulSoup(page.content, 'html.parser')
 
 # extracting image url class_=img-fluid lazyloaded
 img = soup.find('picture', 'item-comic-image')
